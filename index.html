@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#160b12">
+<meta name="description" content="A private birthday surprise made especially for Sadia.">
+<title>For Sadia — A Little Love Story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c070a;--bg2:#160b12;--cream:#f8eee9;--muted:#cbb9bc;--rose:#d9a0a4;--gold:#d9b27a;--line:rgba(255,255,255,.12);--glass:rgba(255,255,255,.055);--shadow:0 30px 90px rgba(0,0,0,.5)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:'Montserrat',sans-serif;overflow-x:hidden}body.locked{overflow:hidden}
+.noise{position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:50;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E")}
+#lock{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at 50% 30%,#552331 0,#1a0c13 42%,#080507 100%);transition:opacity .9s,visibility .9s}.lock-card{width:min(470px,100%);text-align:center;padding:44px 28px;border:1px solid rgba(232,180,167,.25);border-radius:30px;background:rgba(255,255,255,.055);backdrop-filter:blur(20px);box-shadow:var(--shadow)}.lock-kicker{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#e6b9af}.script{font-family:'Great Vibes',cursive;font-weight:400}.lock-card h1{font-size:72px;line-height:.9;margin:10px 0 18px;color:#f7d5ce}.lock-card p{font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.4;color:#e7d5d4;margin:0 auto 25px;max-width:360px}.code{width:100%;height:54px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.25);color:#fff;text-align:center;font-size:17px;letter-spacing:5px;outline:none}.code:focus{border-color:rgba(230,177,159,.7);box-shadow:0 0 0 4px rgba(216,151,145,.08)}.btn{border:0;cursor:pointer;color:#1b0d12;background:linear-gradient(135deg,#f3d0c8,#d8a1a5);font-weight:700;letter-spacing:1.2px;padding:15px 26px;border-radius:999px;margin-top:13px;box-shadow:0 12px 35px rgba(216,150,150,.18);transition:transform .2s,filter .2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}#error{height:18px;margin-top:10px;color:#f0a9a9;font-size:12px;opacity:0}
+main{display:none}.topbar{position:fixed;top:0;left:0;right:0;z-index:20;padding:20px 5vw;display:flex;justify-content:space-between;align-items:center;mix-blend-mode:screen}.brand{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#f6dfda}.mini-heart{font-size:18px;color:#e2a9ad}
+.hero{min-height:100svh;display:grid;place-items:center;position:relative;isolation:isolate;padding:90px 20px 50px}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,5,8,.25),rgba(10,5,8,.72)),url('images/memory1.png') center center/cover no-repeat;filter:saturate(.85);z-index:-2}.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,transparent 0,rgba(9,4,7,.22) 45%,rgba(9,4,7,.82) 100%);z-index:-1}.hero-inner{text-align:center;max-width:900px}.eyebrow{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:#e3bbb4;margin-bottom:15px}.hero h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(44px,8vw,86px);line-height:.94;margin:0}.hero h1{font-size:clamp(78px,14vw,150px);line-height:.78;margin:8px 0 24px;color:#f3c8c4}.hero p{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,3vw,26px);color:#e8d8d7;max-width:650px;margin:0 auto 34px;line-height:1.35}.scroll{display:inline-flex;gap:10px;align-items:center;color:#f0d7d4;font-size:10px;letter-spacing:3px;text-transform:uppercase}.scroll span{display:block;width:36px;height:1px;background:#f0d7d4}
+.section{padding:110px 6vw;position:relative}.section.dark{background:linear-gradient(180deg,#0c070a,#12090f)}.section-head{max-width:850px;margin:0 auto 50px;text-align:center}.section-kicker{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}.section h3{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,6vw,72px);font-weight:500;line-height:.95;margin:12px 0 15px}.section-head p{font-family:'Cormorant Garamond',serif;font-size:21px;color:var(--muted);line-height:1.45;margin:0}
+.memory{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:stretch}.photo-card{border:1px solid var(--line);background:var(--glass);border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}.photo-card.large{min-height:650px}.photo-card img{display:block;width:100%;height:auto;max-height:820px;object-fit:contain;background:#0a0608}.photo-card.large img{height:100%;min-height:650px;object-fit:contain}.caption{padding:25px 28px 29px}.caption .num{font-size:10px;letter-spacing:3px;color:var(--gold)}.caption h4{font-family:'Cormorant Garamond',serif;font-size:35px;font-weight:500;margin:8px 0 5px}.caption p{font-family:'Cormorant Garamond',serif;font-size:19px;line-height:1.35;color:var(--muted);margin:0}.side-stack{display:grid;grid-template-rows:1fr 1fr;gap:30px}.side-stack .photo-card{display:grid;grid-template-columns:44% 56%;min-height:310px}.side-stack img{height:100%;width:100%;object-fit:contain;background:#0a0608}.side-stack .caption{align-self:center}
+.gallery{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.gallery .photo-card{display:flex;flex-direction:column}.gallery img{width:100%;height:390px;object-fit:contain;background:#080507}.gallery .caption{padding:20px 22px 24px}.gallery .caption h4{font-size:30px}
+.letter-wrap{max-width:950px;margin:auto;position:relative}.letter{background:linear-gradient(135deg,#f7eee8,#ead8d0);color:#2a1a1c;border-radius:4px;padding:70px clamp(28px,7vw,90px);box-shadow:0 35px 100px rgba(0,0,0,.42);position:relative}.letter:before,.letter:after{content:"";position:absolute;width:42px;height:42px;border-color:#b28b77;border-style:solid}.letter:before{left:18px;top:18px;border-width:1px 0 0 1px}.letter:after{right:18px;bottom:18px;border-width:0 1px 1px 0}.letter .to{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8e6b64}.letter h4{font-family:'Great Vibes',cursive;font-size:64px;font-weight:400;margin:5px 0 25px;color:#63343e}.letter p{font-family:'Cormorant Garamond',serif;font-size:23px;line-height:1.58;margin:0 0 20px}.signature{font-family:'Great Vibes',cursive;font-size:48px;color:#63343e;margin-top:28px}
+.reasons{max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.reason{padding:28px 18px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.035);text-align:center;min-height:155px;display:flex;flex-direction:column;justify-content:center;transition:transform .3s,border-color .3s}.reason:hover{transform:translateY(-6px);border-color:rgba(230,178,160,.4)}.reason b{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500}.reason span{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#a99398;margin-top:9px}
+.future{min-height:80svh;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 45%,#40202c 0,#160a11 48%,#090508 100%);padding:90px 20px}.future .line{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,5vw,58px);margin:12px 0;color:#e9d7d6}.future .big{font-family:'Great Vibes',cursive;font-size:clamp(75px,13vw,150px);line-height:.8;color:#f1c7c3;margin:25px 0}.final{min-height:90svh;display:grid;place-items:center;text-align:center;padding:90px 20px;background:#080507}.final .quote{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,5vw,58px);line-height:1.1;max-width:900px;margin:0 auto}.final .small{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#aa9297;margin-top:32px}.footer{padding:30px;text-align:center;font-size:10px;letter-spacing:2px;color:#77666b;border-top:1px solid rgba(255,255,255,.07)}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .9s ease,transform .9s ease}.reveal.show{opacity:1;transform:none}.heart{position:fixed;pointer-events:none;z-index:60;font-size:14px;animation:float 2.5s ease-out forwards}@keyframes float{0%{transform:translateY(0) scale(.7);opacity:0}15%{opacity:1}100%{transform:translateY(-180px) translateX(var(--x)) scale(1.2);opacity:0}}
+@media(max-width:900px){.memory{grid-template-columns:1fr}.photo-card.large,.photo-card.large img{min-height:auto}.side-stack{grid-template-rows:auto}.side-stack .photo-card{min-height:300px}.gallery{grid-template-columns:1fr 1fr}.reasons{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.topbar{padding:16px 20px}.hero{padding-top:70px}.hero:before{background-position:center center}.section{padding:82px 18px}.section-head{margin-bottom:34px}.photo-card{border-radius:20px}.photo-card.large img{height:auto}.side-stack .photo-card{display:block}.side-stack img{height:auto;max-height:none}.gallery{grid-template-columns:1fr;gap:18px}.gallery img{height:auto;max-height:none}.reasons{grid-template-columns:1fr 1fr;gap:10px}.reason{min-height:135px;padding:22px 12px}.letter{padding:55px 24px}.letter h4{font-size:53px}.letter p{font-size:20px}.lock-card h1{font-size:62px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.heart{display:none}}
+</style>
+</head>
+<body class="locked">
+<div class="noise"></div>
+<div id="lock">
+  <div class="lock-card">
+    <div class="lock-kicker">A private little surprise</div>
+    <h1 class="script">Sadia ♡</h1>
+    <p>For the girl who deserves a birthday as beautiful and unforgettable as she is.</p>
+    <input id="code" class="code" type="password" inputmode="numeric" maxlength="8" placeholder="Enter your special code" aria-label="Special code">
+    <button class="btn" id="unlock">Unlock the surprise</button>
+    <div id="error">That isn't the special code. Try again.</div>
+  </div>
+</div>
+<main id="site">
+  <div class="topbar"><div class="brand">A little story • for Sadia</div><div class="mini-heart">♡</div></div>
+  <section class="hero">
+    <div class="hero-inner reveal show">
+      <div class="eyebrow">A birthday made personal</div>
+      <h2>For the girl who makes</h2>
+      <h1 class="script">my world softer.</h1>
+      <p>A small corner of the internet, made just for you — because an ordinary birthday wish didn't feel special enough.</p>
+      <a class="scroll" href="#birthday"><span></span>Begin our little story<span></span></a>
+    </div>
+  </section>
+  <section class="section dark" id="birthday">
+    <div class="section-head reveal"><div class="section-kicker">01 • Today is yours</div><h3>Happy Birthday, Sadia</h3><p>Some dates deserve more than a message. They deserve a moment.</p></div>
+    <div class="memory">
+      <article class="photo-card large reveal"><img src="images/memory1.png" alt="Sadia and her fiancé" loading="eager"><div class="caption"><div class="num">THE BEGINNING</div><h4>One beautiful chapter.</h4><p>And somehow, I got lucky enough to be part of the story.</p></div></article>
+      <div class="side-stack">
+        <article class="photo-card reveal"><img src="images/memory2.png" alt="Sadia smiling" loading="lazy"><div class="caption"><div class="num">02</div><h4>That smile.</h4><p>Still one of my favorite things.</p></div></article>
+        <article class="photo-card reveal"><img src="images/memory3.jpg" alt="Sadia portrait" loading="lazy"><div class="caption"><div class="num">03</div><h4>Simply you.</h4><p>Beautiful without trying.</p></div></article>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-head reveal"><div class="section-kicker">02 • The little things</div><h3>Five moments. One very special person.</h3><p>No filters, no replacements — just your real memories, kept exactly as they are.</p></div>
+    <div class="gallery">
+      <article class="photo-card reveal"><img src="images/memory4.jpg" alt="Sadia portrait" loading="lazy"><div class="caption"><div class="num">04</div><h4>Your little ways.</h4><p>The details that make you, you.</p></div></article>
+      <article class="photo-card reveal"><img src="images/memory5.jpg" alt="Sadia at a celebration" loading="lazy"><div class="caption"><div class="num">05</div><h4>My favorite view.</h4><p>Somehow, you make every room brighter.</p></div></article>
+      <article class="photo-card reveal"><img src="images/memory1.png" alt="Sadia and her fiancé" loading="lazy"><div class="caption"><div class="num">06</div><h4>Us.</h4><p>The part of the story I never want to rush.</p></div></article>
+    </div>
+  </section>
+  <section class="section dark">
+    <div class="section-head reveal"><div class="section-kicker">03 • A letter</div><h3>For you, Sadia.</h3></div>
+    <div class="letter-wrap reveal"><div class="letter"><div class="to">Dear Sadia,</div><h4>Happy Birthday, my favorite person.</h4><p>Some people become special slowly. Then there are people who simply arrive and make ordinary moments feel different.</p><p>I hope today reminds you how loved, valued and genuinely special you are. I may not always have the perfect words, but I hope you can always feel the sincerity behind them.</p><p>Here’s to your smile, your dreams, your little habits, and all the beautiful memories still waiting for us.</p><div class="signature">Always yours,</div></div></div>
+  </section>
+  <section class="section">
+    <div class="section-head reveal"><div class="section-kicker">04 • If I had to choose</div><h3>Five things I adore about you.</h3></div>
+    <div class="reasons">
+      <div class="reason reveal"><b>Your smile</b><span>instant happiness</span></div><div class="reason reveal"><b>Your kindness</b><span>beautiful heart</span></div><div class="reason reveal"><b>Your little ways</b><span>uniquely you</span></div><div class="reason reveal"><b>Your presence</b><span>my comfort</span></div><div class="reason reveal"><b>Simply you</b><span>my favorite</span></div>
+    </div>
+  </section>
+  <section class="future">
+    <div class="reveal"><div class="section-kicker">05 • Not the ending</div><div class="line">More memories.</div><div class="line">More laughter.</div><div class="line">More beautiful days.</div><div class="big">Future Mrs. Sadia</div><div class="section-kicker">and a whole lot more to come.</div></div>
+  </section>
+  <section class="final">
+    <div class="reveal"><div class="section-kicker">06 • One last thing</div><p class="quote">“If I could give you one gift today, I'd give you the chance to see yourself through my eyes — just once — so you could understand how special you really are.”</p><div class="small">Happy Birthday, Sadia • Made with love</div></div>
+  </section>
+  <div class="footer">A private birthday page • made especially for Sadia</div>
+</main>
+<script>
+const lock=document.getElementById('lock'),site=document.getElementById('site'),code=document.getElementById('code'),error=document.getElementById('error');
+function unlock(){if(code.value==='10102003'){lock.style.opacity='0';lock.style.visibility='hidden';document.body.classList.remove('locked');site.style.display='block';setTimeout(()=>{lock.remove()},950);hearts(34);document.getElementById('birthday').scrollIntoView({behavior:'smooth'});}else{error.style.opacity='1';code.animate([{transform:'translateX(-7px)'},{transform:'translateX(7px)'},{transform:'translateX(0)'}],{duration:280});}}
+document.getElementById('unlock').addEventListener('click',unlock);code.addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function hearts(n=18){for(let i=0;i<n;i++){const h=document.createElement('div');h.className='heart';h.textContent=Math.random()>.5?'♡':'♥';h.style.left=(45+Math.random()*10)+'vw';h.style.top=(72+Math.random()*12)+'vh';h.style.setProperty('--x',(Math.random()*180-90)+'px');h.style.color=['#e8aeb0','#f1d0b4','#f5e4dc'][i%3];document.body.appendChild(h);setTimeout(()=>h.remove(),2600)}}
+</script>
+</body>
+</html>
